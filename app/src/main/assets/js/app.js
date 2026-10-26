@@ -15,6 +15,7 @@ window.App = (function (global) {
   var prevGs = null;
   var pull = { active: false, y0: 0, dist: 0, busy: false };
   var TARGET_HINT = 46; // pull distance that triggers a refresh
+  var TOP_EPS = 6; // px of scroll still treated as "top of the page"
 
   /* ============ helpers ============ */
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -657,7 +658,7 @@ window.App = (function (global) {
     var indicator = $('#pullIndicator');
     function startY(e) {
       if (pull.busy) return;
-      if (global.scrollY > 0) return;
+      if (global.scrollY > TOP_EPS) return;
       var t = e.touches ? e.touches[0] : e;
       pull.y0 = t.clientY; pull.active = true; pull.dist = 0;
     }
@@ -665,15 +666,15 @@ window.App = (function (global) {
       if (!pull.active || pull.busy) return;
       var t = e.touches ? e.touches[0] : e;
       var dy = t.clientY - pull.y0;
-      if (dy <= 0 || global.scrollY > 0) {
+      if (dy <= 0 || global.scrollY > TOP_EPS) {
         if (dy <= 0 && pull.dist === 0) { pull.active = false; indicator.classList.remove('visible'); return; }
-        if (global.scrollY > 0) { pull.active = false; indicator.classList.remove('visible'); return; }
+        if (global.scrollY > TOP_EPS) { pull.active = false; indicator.classList.remove('visible'); return; }
       }
       pull.dist = Math.min(dy * 0.55, 90);
       var p = Math.min(1, pull.dist / TARGET_HINT);
       indicator.style.setProperty('--pull-rotate', (p * 300) + 'deg');
       indicator.classList.add('visible');
-      if (e.cancelable && global.scrollY === 0) e.preventDefault();
+      if (e.cancelable && global.scrollY <= TOP_EPS) e.preventDefault();
     }
     function endY() {
       if (!pull.active) return;
@@ -691,6 +692,26 @@ window.App = (function (global) {
     document.addEventListener('touchstart', startY, { passive: true });
     document.addEventListener('touchmove', moveY, { passive: false });
     document.addEventListener('touchend', endY, { passive: true });
+
+    // mouse / pen fallback so the gesture also works on desktop
+    function pointerDown(e) {
+      if (e.pointerType === 'touch') return;
+      document.body.style.userSelect = 'none';
+      startY(e);
+    }
+    function pointerMove(e) {
+      if (e.pointerType === 'touch' || !pull.active) return;
+      moveY(e);
+    }
+    function pointerEnd(e) {
+      if (e.pointerType === 'touch') return;
+      document.body.style.userSelect = '';
+      endY(e);
+    }
+    document.addEventListener('pointerdown', pointerDown, { passive: true });
+    document.addEventListener('pointermove', pointerMove, { passive: false });
+    document.addEventListener('pointerup', pointerEnd, { passive: true });
+    document.addEventListener('pointercancel', pointerEnd, { passive: true });
   }
 
   /* ============ events ============ */

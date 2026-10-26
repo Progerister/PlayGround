@@ -1,6 +1,6 @@
 {
-  "builtAt": "2026-10-26T00:28:32.065Z",
-  "online": false,
+  "builtAt": "2026-10-26T00:58:00.922Z",
+  "online": true,
   "checks": [
     {
       "id": "raidrelay",
@@ -11,8 +11,8 @@
       "http": 200,
       "title": "Aion 2 Gear Score Guide: Progression from 700 to 2,800 (Global) — Raid Relay",
       "error": "",
-      "ms": 322,
-      "checkedAt": "2026-10-26T00:28:31.714Z"
+      "ms": 492,
+      "checkedAt": "2026-10-26T00:58:00.578Z"
     },
     {
       "id": "grimvane",
@@ -23,8 +23,8 @@
       "http": 200,
       "title": "Gear score (item level) guide | Aion 2 Companion",
       "error": "",
-      "ms": 221,
-      "checkedAt": "2026-10-26T00:28:31.664Z"
+      "ms": 288,
+      "checkedAt": "2026-10-26T00:58:00.458Z"
     },
     {
       "id": "akunito",
@@ -35,8 +35,8 @@
       "http": 200,
       "title": "Gear | Aion 2 Guides",
       "error": "",
-      "ms": 620,
-      "checkedAt": "2026-10-26T00:28:32.065Z"
+      "ms": 751,
+      "checkedAt": "2026-10-26T00:58:00.922Z"
     },
     {
       "id": "mmoexp",
@@ -47,8 +47,8 @@
       "http": 200,
       "title": "AION 2 Gear Score Guide: How to Go From 700 to 2,800 GS Fast",
       "error": "",
-      "ms": 274,
-      "checkedAt": "2026-10-26T00:28:31.721Z"
+      "ms": 318,
+      "checkedAt": "2026-10-26T00:58:00.490Z"
     }
   ]
 }

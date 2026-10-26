@@ -3,7 +3,7 @@
 (function (global) {
   'use strict';
 
-  var BUILD_AT = '2026-10-26T00:28:32.404Z';
+  var BUILD_AT = '2026-10-26T00:58:29.420Z';
   var GUIDE_URL_ANDROID = 'data/guide.json';
   var APK_URL = '';
 

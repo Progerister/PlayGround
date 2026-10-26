@@ -36,12 +36,23 @@ sed "s/__VERSION_NAME__/$VERSION_NAME/" \
   app/src/main/java/com/playground/aion2gs/MainActivity.java \
   > "$OUT/java/com/playground/aion2gs/MainActivity.java"
 
+MANIFEST="app/src/main/AndroidManifest.xml"
+if [ "${DEBUG:-0}" = "1" ]; then
+  python3 - "$MANIFEST" "$OUT/AndroidManifest.xml" <<'PYMAN'
+import re, sys
+src = open(sys.argv[1], encoding="utf-8").read()
+src = re.sub(r"(<application\b)", r'\1 android:debuggable="true"', src, count=1)
+open(sys.argv[2], "w", encoding="utf-8").write(src)
+PYMAN
+  MANIFEST="$OUT/AndroidManifest.xml"
+fi
+
 echo "== resources =="
 "$BT/aapt2" compile --dir app/src/main/res -o "$OUT/res.zip"
 "$BT/aapt2" link \
   -o "$OUT/base.apk" \
   -I "$AJAR" \
-  --manifest app/src/main/AndroidManifest.xml \
+  --manifest "$MANIFEST" \
   -R "$OUT/res.zip" \
   --min-sdk-version 26 \
   --target-sdk-version 34 \

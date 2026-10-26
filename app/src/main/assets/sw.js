@@ -1,5 +1,8 @@
-/* Offline shell: static files from cache, guide.json always from the network first. */
-var CACHE = 'aion2gs-v1';
+/* Offline shell.
+   guide.json, navigations and code (js/css/manifest) are network-first, so an
+   updated deploy reaches users on the very next load; fonts and images stay
+   cache-first because they never change between releases. */
+var CACHE = 'aion2gs-v2';
 var SHELL = [
   './',
   './index.html',
@@ -37,8 +40,10 @@ self.addEventListener('fetch', function (event) {
 
   var isGuide = /guide\.json$/.test(url.pathname);
   var isNav = event.request.mode === 'navigate';
+  var isCode = /\.(js|css|webmanifest)$/.test(url.pathname) || /sw\.js$/.test(url.pathname);
+  var isStatic = /\.(woff2?|png|jpg|jpeg|webp|svg|ico)$/.test(url.pathname);
 
-  if (isGuide || isNav) {
+  if (isGuide || isNav || isCode) {
     event.respondWith(
       fetch(event.request)
         .then(function (res) {
@@ -55,16 +60,21 @@ self.addEventListener('fetch', function (event) {
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request).then(function (hit) {
-      if (hit) return hit;
-      return fetch(event.request).then(function (res) {
-        if (res && res.status === 200 && res.type === 'same-origin') {
-          var copy = res.clone();
-          caches.open(CACHE).then(function (c) { c.put(event.request, copy); }).catch(function () {});
-        }
-        return res;
-      });
-    })
-  );
+  if (isStatic) {
+    event.respondWith(
+      caches.match(event.request).then(function (hit) {
+        if (hit) return hit;
+        return fetch(event.request).then(function (res) {
+          if (res && res.status === 200 && res.type === 'same-origin') {
+            var copy = res.clone();
+            caches.open(CACHE).then(function (c) { c.put(event.request, copy); }).catch(function () {});
+          }
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  event.respondWith(fetch(event.request).catch(function () { return Response.error(); }));
 });
