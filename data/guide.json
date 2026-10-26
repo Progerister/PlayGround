@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "game": "Aion 2 Global",
     "title": "Путь к 2000 GS",
     "subtitle": "Что фармить между 1600 и 2000",
@@ -11,12 +11,17 @@
     "updated": "2026-10-26",
     "note": "Числа сверены с клиентскими таблицами Global (патч от 21.10.2026) и фанатскими вики.",
     "disclaimer": "Неофициальный фанатский гайд. Aion и Aion 2 — товарные знаки NCSOFT.",
-    "builtAt": "2026-10-26T00:28:32.182Z",
+    "builtAt": "2026-10-26T00:58:00.923Z",
     "sourcesOk": 4,
     "sourcesTotal": 4
   },
   "feedNote": "Данные приходят из data/guide.json — потяните экран вниз, чтобы обновить.",
   "updates": [
+    {
+      "date": "2026-10-26",
+      "tag": "приложение",
+      "text": "Оболочка обновлена: pull-to-refresh работает и на десктопе, офлайн-кэш подхватывает новую сборку сразу после публикации."
+    },
     {
       "date": "2026-10-26",
       "tag": "гайд",
@@ -939,7 +944,7 @@
       "url": "https://raidrelay.com/aion-2-gear-score-guide",
       "note": "маршрут 700 → 2800, клиентские таблицы Global, шансы и цены",
       "status": "ok",
-      "checkedAt": "2026-10-26T00:28:31.714Z",
+      "checkedAt": "2026-10-26T00:58:00.578Z",
       "title": "Aion 2 Gear Score Guide: Progression from 700 to 2,800 (Global) — Raid Relay"
     },
     {
@@ -948,7 +953,7 @@
       "url": "https://aion2.grimvane.app/companion/wiki/item-level/",
       "note": "ворота контента, таблица цен качания, градусы Арканы",
       "status": "ok",
-      "checkedAt": "2026-10-26T00:28:31.664Z",
+      "checkedAt": "2026-10-26T00:58:00.458Z",
       "title": "Gear score (item level) guide | Aion 2 Companion"
     },
     {
@@ -957,7 +962,7 @@
       "url": "https://aion2.akunito.com/en/systems/gear/",
       "note": "Global против KR, розетки, список ловушек",
       "status": "ok",
-      "checkedAt": "2026-10-26T00:28:32.065Z",
+      "checkedAt": "2026-10-26T00:58:00.922Z",
       "title": "Gear | Aion 2 Guides"
     },
     {
@@ -966,7 +971,7 @@
       "url": "https://www.mmoexp.com/News/aion-2-gear-score-guide-how-to-go-from-700-to-2-800-gs-fast.html",
       "note": "сводка маршрута для сверки",
       "status": "ok",
-      "checkedAt": "2026-10-26T00:28:31.721Z",
+      "checkedAt": "2026-10-26T00:58:00.490Z",
       "title": "AION 2 Gear Score Guide: How to Go From 700 to 2,800 GS Fast"
     }
   ]
