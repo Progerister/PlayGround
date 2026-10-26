@@ -1,0 +1,54 @@
+{
+  "builtAt": "2026-10-26T00:28:32.065Z",
+  "online": false,
+  "checks": [
+    {
+      "id": "raidrelay",
+      "name": "Raid Relay — Gear Score Guide",
+      "url": "https://raidrelay.com/aion-2-gear-score-guide",
+      "note": "маршрут 700 → 2800, клиентские таблицы Global, шансы и цены",
+      "status": "ok",
+      "http": 200,
+      "title": "Aion 2 Gear Score Guide: Progression from 700 to 2,800 (Global) — Raid Relay",
+      "error": "",
+      "ms": 322,
+      "checkedAt": "2026-10-26T00:28:31.714Z"
+    },
+    {
+      "id": "grimvane",
+      "name": "Grimvane Companion — Item Level",
+      "url": "https://aion2.grimvane.app/companion/wiki/item-level/",
+      "note": "ворота контента, таблица цен качания, градусы Арканы",
+      "status": "ok",
+      "http": 200,
+      "title": "Gear score (item level) guide | Aion 2 Companion",
+      "error": "",
+      "ms": 221,
+      "checkedAt": "2026-10-26T00:28:31.664Z"
+    },
+    {
+      "id": "akunito",
+      "name": "Aion 2 Guides — Gear",
+      "url": "https://aion2.akunito.com/en/systems/gear/",
+      "note": "Global против KR, розетки, список ловушек",
+      "status": "ok",
+      "http": 200,
+      "title": "Gear | Aion 2 Guides",
+      "error": "",
+      "ms": 620,
+      "checkedAt": "2026-10-26T00:28:32.065Z"
+    },
+    {
+      "id": "mmoexp",
+      "name": "MMOexp — Gear Score Guide",
+      "url": "https://www.mmoexp.com/News/aion-2-gear-score-guide-how-to-go-from-700-to-2-800-gs-fast.html",
+      "note": "сводка маршрута для сверки",
+      "status": "ok",
+      "http": 200,
+      "title": "AION 2 Gear Score Guide: How to Go From 700 to 2,800 GS Fast",
+      "error": "",
+      "ms": 274,
+      "checkedAt": "2026-10-26T00:28:31.721Z"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#0e1514">
+<meta name="color-scheme" content="dark light">
+<title>AION 2 · Путь к 2000 GS</title>
+<meta name="description" content="Живой гайд по прокачке gear score в Aion 2 Global: что фармить между 1600 и 2000 GS — Аркана, Vakron, Urugugu, розетки и рутина.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" width="0" height="0" style="position:absolute">
+  <defs>
+    <g id="g-base" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></g>
+  </defs>
+  <symbol id="i-mark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 2.6 20 7.3v9.4L12 21.4 4 16.7V7.3z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M8.4 14.2 12 10.4l3.6 3.8M12 10.4v6.2"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.8-6 6.8-11a6.8 6.8 0 1 0-13.6 0C5.2 15 12 21 12 21z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+  <symbol id="i-hammer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13.6 3.6 20.4 10.4"/><path d="M15.8 5.6 9.4 12l2.6 2.6 6.4-6.4"/><path d="M9.2 14.6 4 19.8a1.7 1.7 0 0 0 2.4 2.4l5.2-5.2"/></g></symbol>
+  <symbol id="i-cards" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6.5" width="9.5" height="14" rx="2"/><path d="M16.4 4.2a2 2 0 0 1 2.7.9l2 5.3a2 2 0 0 1-.9 2.6l-5.9 2.6"/><path d="M7.8 11.5v4M5.8 13.5h4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.2 5.4 9.1 9.2 5.3"/><path d="M3.5 16.9l1.9 1.9 3.8-3.8"/><path d="M13 7h7.5M13 17h7.5"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v18H6.5A2.5 2.5 0 0 0 4 23z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H19"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M13.4 2.5 4.8 13.4h6.1l-1 8.1 8.7-11.1h-6.2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 19 5.8v5.6c0 4.4-2.9 7.8-7 9.6-4.1-1.8-7-5.2-7-9.6V5.8z"/><path d="M9.2 12.1l2 2 3.6-3.9"/></g></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14.5" r="5.7"/><path d="M8.7 6.4 12 2.6l3.3 3.8M8.7 6.4h6.6"/></g></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h11l3.5 6-9 12-9-12z"/><path d="M3 9h18M9 3l-2.5 6L9.5 21M15 3l2.5 6L14.5 21"/></g></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21M5.6 5.6l2.6 2.6M15.8 15.8l2.6 2.6M18.4 5.6l-2.6 2.6M8.2 15.8l-2.6 2.6"/></g></symbol>
+  <symbol id="i-feather" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5c0 7.2-5.2 12.2-12.4 12.2H4.5c0-7.2 5.2-12.2 12.4-12.2z"/><path d="M4.5 19.5 14 10M8 17.5l-1.6-1.6M11 14.5l-1.6-1.6"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M12 7.4V12l3.2 2"/></g></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="5.2" width="16.8" height="15.2" rx="2.4"/><path d="M3.6 10h16.8M8.6 3.4v3.6M15.4 3.4v3.6"/></g></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 12a8.4 8.4 0 1 1-2.5-6"/><path d="M20.4 3.6v5.2h-5.2"/></g></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.2v2.4M12 18.4v2.4M4.5 7.7l2.1 1.2M17.4 15.1l2.1 1.2M4.5 16.3l2.1-1.2M17.4 8.9l2.1-1.2"/></g></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.6 21V3.6"/><path d="M5.6 4.8h11.9l-2.4 3.6 2.4 3.6H5.6"/></g></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.6v14.8M6.4 13.8 12 19.4l5.6-5.6"/></g></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m6.5 9.5 5.5 5.5 5.5-5.5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6v11M7.4 10.4 12 15l4.6-4.6"/><path d="M4.6 19.6h14.8"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 9.6a12 12 0 0 1 15.2 0M7.8 13.4a7 7 0 0 1 8.4 0"/><circle cx="12" cy="17.6" r="1.3"/></g></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 6.2v11.6M6.2 12h11.6"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6.2 12h11.6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.4"/><circle cx="12" cy="12" r="4.4"/><circle cx="12" cy="12" r="1"/></g></symbol>
+</svg>
+
+<canvas id="fxCanvas" aria-hidden="true"></canvas>
+
+<div class="app" id="app">
+
+  <header class="appbar">
+    <div class="appbar-row">
+      <div class="appbar-mark" id="barMark"><svg><use href="#i-mark"></use></svg></div>
+      <div class="appbar-titles">
+        <span class="appbar-label" id="barLabel">AION 2 · GLOBAL</span>
+        <h1 class="appbar-title" id="barTitle">Путь к 2000 GS</h1>
+      </div>
+      <button class="icon-button" id="btnRefresh" aria-label="Обновить данные"><svg><use href="#i-refresh"></use></svg></button>
+      <button class="icon-button" id="btnSettings" aria-label="Настройки"><svg><use href="#i-gear"></use></svg></button>
+    </div>
+  </header>
+
+  <div class="pull-indicator" id="pullIndicator" aria-hidden="true"><svg><use href="#i-arrow-down"></use></svg></div>
+
+  <main id="main">
+
+    <section class="screen active" id="screen-home" data-title="Путь к 2000 GS" data-label="Маршрут · 1600 → 2000">
+      <div class="hero reveal" id="hero">
+        <div class="hero-top">
+          <div class="gs-block">
+            <span class="label">Ваш уровень</span>
+            <div class="gs-value"><span id="gsNow">1600</span><span class="gs-unit">GS</span></div>
+            <div id="gsToGo">до цели 400 очков</div>
+          </div>
+          <div class="ring-wrap">
+            <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="ring-track" cx="50" cy="50" r="42"></circle>
+              <circle class="ring-arc" id="ringArc" cx="50" cy="50" r="42"></circle>
+            </svg>
+            <div class="ring-label"><strong id="ringPct">0%</strong><small id="ringCap">до 2000</small></div>
+          </div>
+        </div>
+        <div class="progress-rail"><span id="gsBar"></span></div>
+        <div class="hero-meta"><span id="gsFrom">старт 1600</span><span id="gsStage">стадия маршрута</span></div>
+        <div class="gs-controls">
+          <button class="step-button" id="gsMinus" aria-label="Меньше">−</button>
+          <input type="range" id="gsRange" min="1000" max="2500" step="10" value="1600" aria-label="Gear score">
+          <button class="step-button" id="gsPlus" aria-label="Больше">+</button>
+        </div>
+      </div>
+
+      <div class="feed-line" id="feedLine">
+        <span class="dot" id="feedDot"></span>
+        <span class="grow" id="feedText">загрузка данных…</span>
+        <button id="feedAction">обновить</button>
+      </div>
+
+      <div id="nextStep"></div>
+
+      <div class="section-title reveal">
+        <h2>Маршрут</h2>
+        <span class="meta" id="routeMeta">1600 → 2000</span>
+      </div>
+      <div class="timeline" id="timeline"></div>
+
+      <p class="footer-note" id="homeFoot"></p>
+    </section>
+
+    <section class="screen" id="screen-farm" data-title="Что фармить" data-label="Источники GS"></section>
+
+    <section class="screen" id="screen-arcana" data-title="Аркана" data-label="Калькулятор пяти слотов"></section>
+
+    <section class="screen" id="screen-check" data-title="Чеклист" data-label="Прогресс"></section>
+
+    <section class="screen" id="screen-sources" data-title="Данные" data-label="Источники и цифры"></section>
+
+  </main>
+
+  <nav class="nav-bar" id="navBar">
+    <button class="nav-item active" data-screen="home"><span class="indicator"></span><svg><use href="#i-route"></use></svg><span>Маршрут</span></button>
+    <button class="nav-item" data-screen="farm"><span class="indicator"></span><svg><use href="#i-hammer"></use></svg><span>Фарм</span></button>
+    <button class="nav-item" data-screen="arcana"><span class="indicator"></span><svg><use href="#i-cards"></use></svg><span>Аркана</span></button>
+    <button class="nav-item" data-screen="check"><span class="indicator"></span><svg><use href="#i-check"></use></svg><span>Чеклист</span></button>
+    <button class="nav-item" data-screen="sources"><span class="indicator"></span><svg><use href="#i-book"></use></svg><span>Данные</span></button>
+  </nav>
+
+  <div class="snackbar" id="snackbar"><span id="snackText"></span><button id="snackAction">ок</button></div>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Настройки">
+    <div class="sheet-handle"></div>
+    <h2>Настройки</h2>
+    <p class="sub">Тема, цвета и данные гайда</p>
+
+    <div class="sheet-section">
+      <span class="label">Тема</span>
+      <div class="segmented wide" id="themeSeg">
+        <button data-theme-mode="auto" class="on"><svg><use href="#i-target"></use></svg>Авто</button>
+        <button data-theme-mode="light"><svg><use href="#i-spark"></use></svg>Светлая</button>
+        <button data-theme-mode="dark"><svg><use href="#i-cards"></use></svg>Тёмная</button>
+      </div>
+    </div>
+
+    <div class="sheet-section">
+      <span class="label">Material You</span>
+      <div class="switch-row" id="dynRow">
+        <div class="grow">
+          <strong>Динамические цвета</strong>
+          <p id="dynHint">Берут палитру из обоев Android 13+</p>
+        </div>
+        <label class="switch"><input type="checkbox" id="dynSwitch"><span class="track"></span><span class="thumb"></span></label>
+      </div>
+    </div>
+
+    <div class="sheet-section">
+      <span class="label">Данные</span>
+      <div class="switch-row">
+        <div class="grow">
+          <strong id="dataVer">гайд v1.0.0</strong>
+          <p id="dataWhen">локальный снимок</p>
+        </div>
+      </div>
+      <button class="tonal-button" id="sheetRefresh"><svg><use href="#i-refresh"></use></svg>Проверить обновления</button>
+      <button class="filled-button" id="sheetDownload" hidden><svg><use href="#i-download"></use></svg>Скачать APK</button>
+    </div>
+
+    <div class="sheet-section">
+      <span class="label">О гайде</span>
+      <div class="about-block">
+        <b>Что это</b>
+        <p id="aboutWhat">Маршрут с 1600 до 2000 gear score в Aion 2 Global: какие подземелья, сколько Odyle тратить и какие карты Арканы качать.</p>
+      </div>
+      <div class="about-block">
+        <b>Как обновляется</b>
+        <p id="aboutLive">Контент лежит в data/guide.json и подтягивается из сети. Потяните главный экран вниз или нажмите «проверить обновления».</p>
+      </div>
+      <div class="about-block">
+        <b>Где цифры</b>
+        <div class="source-list" id="sheetSources"></div>
+      </div>
+    </div>
+
+    <p class="version" id="sheetVersion"></p>
+  </div>
+
+  <div class="splash" id="splash">
+    <svg class="splash-mark" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="sm-hex" d="M12 2.6 20 7.3v9.4L12 21.4 4 16.7V7.3z"></path>
+      <path class="sm-in" d="M8.4 14.2 12 10.4l3.6 3.8M12 10.4v6.2"></path>
+    </svg>
+    <div class="splash-name">AION 2</div>
+    <div class="splash-sub">Путь к 2000 GS</div>
+    <div class="splash-bar"><span></span></div>
+  </div>
+
+</div>
+
+<script src="js/guide-data.js"></script>
+<script src="js/config.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
